@@ -8,7 +8,7 @@ public class Employee implements Serializable {
     @javax.persistence.Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false,updatable = false)
-    private Long Id;
+    private Long id;
 
     private String name;
 
@@ -27,7 +27,7 @@ public class Employee implements Serializable {
     }
 
     public Employee(Long id, String name, String email, String jobTitle, String phone, String imageUrl, String employeeCode) {
-        Id = id;
+        this.id = id;
         this.name = name;
         this.email = email;
         this.jobTitle = jobTitle;
@@ -37,11 +37,11 @@ public class Employee implements Serializable {
     }
 
     public Long getId() {
-        return Id;
+        return id;
     }
 
     public void setId(Long id) {
-        Id = id;
+        this.id = id;
     }
 
     public String getName() {
@@ -95,7 +95,7 @@ public class Employee implements Serializable {
     @Override
     public String toString() {
         return "Employee{" +
-                "Id=" + Id +
+                "id=" + id +
                 ", name='" + name + '\'' +
                 ", email='" + email + '\'' +
                 ", jobTitle='" + jobTitle + '\'' +
