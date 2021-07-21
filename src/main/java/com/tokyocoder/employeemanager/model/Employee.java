@@ -5,7 +5,7 @@ import java.io.Serializable;
 
 @Entity
 public class Employee implements Serializable {
-    @javax.persistence.Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false,updatable = false)
     private Long id;
